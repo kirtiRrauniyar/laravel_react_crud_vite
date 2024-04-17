@@ -5,7 +5,7 @@ export default function Protected(props) {
     useEffect( ()=>{
         if(!localStorage.getItem('user-info'))
         {
-            window.location.href = 'http://localhost/My-Folder/Laravel_react_curd/register';
+            window.location.href = 'http://localhost/My-Folder/Laravel_react_crud/register';
         }
 
     },[] )

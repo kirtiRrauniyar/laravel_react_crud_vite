@@ -17,4 +17,24 @@ class UserController extends Controller
         $user->save();
         return $user;
     }
+
+    public function login(Request $request)
+    {
+        $user = User::where('email',$request->email)->first();
+        if(!$user || !Hash::check($request->password,$user->password))
+        {
+
+            return response([
+                'message' =>'Email or Password are noreturnt match',
+                'status' =>'failed',
+                'status_code' =>400
+            ],401);
+        }
+        return response([
+            'user' => $user,
+            'message'=>'Login Successfully',
+            'status'=> 'success',
+            'status_code' =>200
+        ],200);
+    }
 }

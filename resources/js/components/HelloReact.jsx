@@ -14,23 +14,12 @@ import Registration from './Registration'
 
 export default function HelloReact() {
   return (
-    <BrowserRouter basename='/My-Folder/Laravel_react_curd/'>
+    <BrowserRouter basename='/My-Folder/Laravel_react_crud/'>
 
-     <h1>Hello React Component Pages</h1>
+     {/* <h1>Hello React Component Pages</h1> */}
 
 
-     <nav>
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/add">Addroduct</Link></li>
-            <li><Link to="/update">Updateproduct</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Registration</Link></li>
 
-        </ul>
-     </nav>
     <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/about" element={<About />} />
